@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="admin.css">
+        
+</head>
+<body>
+    <nav>
+        <h1>Complaints Dashboard</h1>
+        <div class="btns">
+            <button><a href="./" style="text-decoration: none;">User Portal</a></button>
+            <button><a href="./admin" style="text-decoration: none;">Admin Portal</a></button>
+        </div>
+    </nav>
+    <div class="status">
+        <div class="cards" id="total">Total Complaints</div>
+        <div class="cards" id="pending">Pending</div>
+        <div class="cards" id="resolved">Resolved</div>
+        <div class="cards" id="rejected">Rejected</div>
+    </div>
+
+    <div class="filter">
+        <input type="text" id="searchInput" placeholder="Search by ID, name, or subject">
+        <button onclick="filterByStatus('all')">All</button>
+        <button onclick="filterByStatus('pending')">Pending</button>
+        <button onclick="filterByStatus('resolved')">Resolved</button>
+        <button onclick="filterByStatus('rejected')">Rejected</button>
+    </div>
+
+    <ul id="list_complaints">
+
+    </ul>
+    <footer><p>&copy; 2024 Complaints Dashboard. All rights reserved.</p></footer>
+</body>
+<script src="admin.js"></script>
+</html>

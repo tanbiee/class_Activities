@@ -1,0 +1,192 @@
+/* ===== Import Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    background: #f6fbfb;
+    min-height: 100vh;
+    color: #2e2e2e;
+}
+
+/* ===== Navbar ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e6f1f1;
+}
+
+nav h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2bb0a6;
+}
+
+nav .btns button {
+    margin-left: 12px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #2bb0a6;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+nav .btns a {
+    text-decoration: none;
+    color: #2bb0a6;
+    font-weight: 500;
+}
+
+nav .btns button:hover {
+    background: #2bb0a6;
+}
+
+nav .btns button:hover a {
+    color: #fff;
+}
+
+/* ===== Status Cards ===== */
+.status {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin: 30px;
+}
+
+.status .cards {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    font-weight: 600;
+    color: #2bb0a6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Filter Section ===== */
+.filter {
+    display: flex;
+    gap: 12px;
+    margin: 0 30px 20px;
+}
+
+.filter input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #dceeee;
+    font-size: 14px;
+}
+
+.filter input:focus {
+    outline: none;
+    border-color: #2bb0a6;
+    box-shadow: 0 0 0 2px rgba(43, 176, 166, 0.15);
+}
+
+.filter button {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    background: #ff8c69;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter button:hover {
+    background: #ff7550;
+}
+
+/* ===== Complaint List (2-Column Grid) ===== */
+#list_complaints {
+    margin: 50px;
+    margin-bottom: 90px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+#list_complaints li {
+    list-style: none;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 14px;
+    border-left: 4px solid #2bb0a6;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ===== Complaint Text ===== */
+#list_complaints h3 {
+    font-size: 15px;
+    color: #2bb0a6;
+}
+
+#list_complaints p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== Select & Buttons ===== */
+select {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #dceeee;
+    font-size: 13px;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #ffb199;
+    color: #2e2e2e;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    background: #ff9f82;
+}
+
+/* ===== Footer ===== */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    background: #ffffff;
+    border-top: 1px solid #e6f1f1;
+    color: #2bb0a6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .status {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #list_complaints {
+        grid-template-columns: 1fr;
+    }
+}

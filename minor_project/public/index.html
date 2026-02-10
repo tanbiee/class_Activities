@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Complaints Dashboard</h1>
+        <div class="btns">
+            <button><a href="./" style="text-decoration: none;">User Portal</a></button>
+            <button><a href="./admin" style="text-decoration: none;">Admin Portal</a></button>
+        </div>
+    </nav>
+    <div class="form">
+        <h2>Submit Complaint</h2>
+        <p>Fill out the form below to submit a complaint. You will receive a tracker ID to track your complaint status.</p>
+        <form id="complaintForm">
+            <label for="name">Name:
+                <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
+            </label> <br>
+            <label for="email">Email: 
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </label><br>
+            <label for="title">Title: 
+                <input type="text" id="title" name="title" placeholder="Enter Complaint Title" required>
+            </label><br>
+            <label for="description">Description: 
+                <textarea name="description" id="description" placeholder="Provide detailed information about your complaint..." cols="50" rows="5"></textarea>
+            </label><br>
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </div>
+    <footer><p>&copy; 2024 Complaints Dashboard. All rights reserved.</p></footer>
+
+    <script>
+        const form = document.getElementById("complaintForm");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const payload = Object.fromEntries(formData.entries());
+
+            const res = await fetch("/complaints", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+            alert(data.message);
+            window.location.href = "/admin";
+            } else {
+            alert(data.message || "Something went wrong");
+            }
+        });
+    </script>
+</body>
+</html>

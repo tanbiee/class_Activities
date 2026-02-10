@@ -1,0 +1,34 @@
+[
+  {
+    "id": 15,
+    "name": "tanvi",
+    "email": "this@gmail.com",
+    "title": "my email is not getting updated",
+    "description": "i need to change my email and update to new one",
+    "status": "rejected"
+  },
+  {
+    "id": 18,
+    "name": "sam",
+    "email": "sam8968@gmail.com",
+    "title": "fdsfgfhhsh",
+    "description": "gfrrsehnb",
+    "status": "resolved"
+  },
+  {
+    "id": 20,
+    "name": "neel",
+    "email": "neel@gmail.com",
+    "title": "my email is not getting updated",
+    "description": "i need to change my email and update to new one",
+    "status": "resolved"
+  },
+  {
+    "id": 21,
+    "name": "camilla",
+    "email": "camilla24@gmail.com",
+    "title": "study visa",
+    "description": "i wanna know about my study visa",
+    "status": "pending"
+  }
+]
