@@ -1,8 +1,10 @@
 # created IAM user in AWS 
+
 ![alt text](image-3.png)
-![alt text](img-4.png)
-![alt text](img-5.png)
-![alt text](img-6.png)
+![alt text](img-4.jpg)
+![alt text](img-5.jpg)
+![alt text](img-6.jpg)
+
 
 
 # commands to create EC2 instance in aws using terrafomr 
